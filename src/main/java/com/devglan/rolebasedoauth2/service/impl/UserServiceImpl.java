@@ -47,6 +47,7 @@ public class UserServiceImpl implements UserDetailsService, UserService {
         }
         Set<GrantedAuthority> grantedAuthorities = getAuthorities(user);
 
+        System.out.println("user found!!!!!!!!!!!!!!!!!!!");
 
         return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), grantedAuthorities);
     }
